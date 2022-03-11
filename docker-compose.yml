@@ -1,0 +1,22 @@
+networks:
+  haproxy:
+    driver: bridge
+
+services:  
+  whoami:
+    image: "traefik/whoami"
+    container_name: "whoami"
+    expose:
+      - 80
+    networks:
+      - haproxy
+  haproxy:
+    image: haproxytech/haproxy-alpine:2.4
+    container_name: haproxy
+    volumes:
+      - ./haproxy/etc:/usr/local/etc/haproxy:ro
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - haproxy
