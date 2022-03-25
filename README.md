@@ -17,7 +17,7 @@ cp server.pem ca.crt ~/mtls-haproxy/haproxy/etc/certs
 cd ~/mtls-cert-manage/pki/clientcerts
 cp * ~/mtls-haproxy/certs
 ```
-# Getting started nginx with certificate
+# Getting Haproxy started with certificate
 ```bash
 docker-compose up -d
 ```
