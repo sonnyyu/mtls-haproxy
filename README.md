@@ -31,9 +31,15 @@ docker-compose down -v
 ```
 # Test mTLS
 ```bash
-cd ~/mtls-haproxy/cert
+cd ~/mtls-haproxy/certs
 curl --cert client1.crt --key client1.key --cacert ca.crt https://192.168.1.204
 curl --cert-type P12 --cert client1.p12:password --cacert ca.crt https://192.168.1.204
+```
+# Test mTLS with password
+```bash
+cd ~/mtls-haproxy/certs
+curl --cert client2.crt:cppass --key client2.key --cacert ca.crt https://192.168.1.204
+curl --cert-type P12 --cert client2.p12:p12pass --cacert ca.crt https://192.168.1.204
 ```
 # Install certificate at PC
 [Install certificate](https://github.com/sonnyyu/mtls-cert-manage#install-certificate-at-windows)
