@@ -10,7 +10,7 @@ cd mtls-haproxy
 # Copy Certificate from mtls-cert-manage
 ```bash
 cd ~/mtls-cert-manage/pki/haproxycerts
-cp server.pem ca.crt ~/mtls-haproxy/haproxy/etc/cert
+cp server.pem ca.crt ~/mtls-haproxy/haproxy/etc/certs
 ```
 # Getting started nginx with certificate
 ```bash
