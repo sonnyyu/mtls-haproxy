@@ -12,6 +12,11 @@ cd mtls-haproxy
 cd ~/mtls-cert-manage/pki/haproxycerts
 cp server.pem ca.crt ~/mtls-haproxy/haproxy/etc/certs
 ```
+# Copy Certificate from mtls-cert-manage
+```bash
+cd ~/mtls-cert-manage/pki/clientcerts
+cp * ~/mtls-haproxy/certs
+```
 # Getting started nginx with certificate
 ```bash
 docker-compose up -d
