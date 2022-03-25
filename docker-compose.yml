@@ -16,7 +16,7 @@ services:
     volumes:
       - ./haproxy/etc:/usr/local/etc/haproxy:ro
     ports:
-      - "3000:3000"
+      - "443:443"
     restart: unless-stopped
     networks:
       - haproxy
