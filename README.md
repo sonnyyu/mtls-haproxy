@@ -7,12 +7,12 @@ cd mtls-haproxy
 
 [https://github.com/sonnyyu/mtls-cert-manage](https://github.com/sonnyyu/mtls-cert-manage)
 
-# Copy Certificate from mtls-cert-manage
+# Copy Server Certificate from mtls-cert-manage
 ```bash
 cd ~/mtls-cert-manage/pki/haproxycerts
 cp server.pem ca.crt ~/mtls-haproxy/haproxy/etc/certs
 ```
-# Copy Certificate from mtls-cert-manage
+# Copy Client Certificate from mtls-cert-manage
 ```bash
 cd ~/mtls-cert-manage/pki/clientcerts
 cp * ~/mtls-haproxy/certs
